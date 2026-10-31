@@ -25,7 +25,7 @@ The project focuses on analysing Windows Security Event Logs, identifying repeat
 
 ## Project Status
 
-Completed
+In progress.
 
 ## Data and Testing
 
@@ -43,26 +43,34 @@ Simulated events will be clearly identified and will not be represented as real 
 - Sample incident report
 - Screenshots of project testing
 
-## Disclaimer
+---------------------------
 
-This project is intended for educational and portfolio purposes. It does not represent professional SOC employment experience.
-
-Project Screenshots
+## Project Screenshots
 
 The following screenshots demonstrate the searches performed in Splunk using synthetic Windows authentication events.
 
-1. Windows Event Ingestion
+### 1. Windows Event Ingestion
+![Windows Event Ingestion](screenshots/01_event_ingestion.png)
 
-2. Failed Login Detection
+### 2. Failed Login Detection
+![Failed Login Detection](screenshots/02_failed_login_detection.png)
 
-3. Potential Brute-Force Activity
+### 3. Potential Brute-Force Activity
+![Potential Brute-Force Detection](screenshots/03_brute_force_detection.png)
 
-4. Failed Logins and Successful Authentication
+### 4. Failed Logins and Successful Authentication
+![Failed and Successful Login Analysis](screenshots/04_failed_then_success.png)
 
+### 5. Multiple Accounts Targeted by One IP
+![Multiple Accounts Detection](screenshots/05_multiple_accounts_detection.png)
+
+### 6. Windows Authentication Monitoring Dashboard
+![Windows Authentication Monitoring Dashboard](screenshots/06_windows_authentication_dashboard.png)
+--------------------------------------------
 ## Detection Scenarios
 
 ### 1. Windows Failed Login Detection
-- Event ID: 4625
+- **Event ID:** 4625
 - Identified failed login attempts by account and source IP address.
 - Counted authentication failures to identify accounts requiring further investigation.
 
@@ -94,23 +102,26 @@ The following screenshots demonstrate the searches performed in Splunk using syn
 
 This project uses synthetic Windows authentication events created for educational purposes. The results demonstrate detection logic and investigation techniques; they do not represent a confirmed real-world security incident.
 
+--------------------------------------------------
+
 ### Windows Authentication Monitoring Dashboard
 
 Created a Splunk dashboard to visualize and investigate simulated Windows authentication events.
 
-Dashboard panels:
+**Dashboard panels:**
 - Windows Authentication Events by Event ID
 - Failed Login Attempts by User and Source IP
 - Potential Brute-Force Login Activity by Source IP
 - Failed and Successful Logins by User and Source IP
 
-Skills demonstrated:
+**Skills demonstrated:**
 - SPL query development
 - Windows authentication event analysis
 - Failed login investigation
 - Suspicious authentication pattern detection
 - Security dashboard creation and visualization
 
-Note: This project uses simulated Windows security event data for educational and demonstration purposes.
+**Note:** This project uses simulated Windows security event data for educational and demonstration purposes.
+## Disclaimer
 
-5. Multiple Accounts Targeted by One IP
+This project is intended for educational and portfolio purposes. It does not represent professional SOC employment experience.
