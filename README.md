@@ -47,7 +47,6 @@ Simulated events will be clearly identified and will not be represented as real 
 
 This project is intended for educational and portfolio purposes. It does not represent professional SOC employment experience.
 
-
 Project Screenshots
 
 The following screenshots demonstrate the searches performed in Splunk using synthetic Windows authentication events.
@@ -59,5 +58,40 @@ The following screenshots demonstrate the searches performed in Splunk using syn
 3. Potential Brute-Force Activity
 
 4. Failed Logins and Successful Authentication
+
+## Detection Scenarios
+
+### 1. Windows Failed Login Detection
+- **Event ID:** 4625
+- Identified failed login attempts by account and source IP address.
+- Counted authentication failures to identify accounts requiring further investigation.
+
+### 2. Potential Brute-Force Activity
+- Aggregated failed login attempts by source IP.
+- Applied a threshold of three or more failed attempts.
+- Identified IP addresses associated with repeated authentication failures.
+
+### 3. Failed Logins Across Multiple Accounts
+- Identified source IP addresses associated with failed login attempts against three or more distinct accounts.
+- Reviewed targeted account names to identify suspicious authentication patterns.
+
+### 4. Failed Logins Followed by Successful Authentication
+- Analyzed failed login (Event ID 4625) and successful login (Event ID 4624) events.
+- Identified account and source IP combinations containing both event types.
+- Flagged the pattern for further investigation rather than treating it as confirmed account compromise.
+
+## Tools and Skills Demonstrated
+
+- Splunk Enterprise
+- Search Processing Language (SPL)
+- Windows authentication event analysis
+- Security event aggregation and filtering
+- Source IP and account investigation
+- Basic detection logic development
+- Incident documentation
+
+## Dataset Disclaimer
+
+This project uses synthetic Windows authentication events created for educational purposes. The results demonstrate detection logic and investigation techniques; they do not represent a confirmed real-world security incident.
 
 5. Multiple Accounts Targeted by One IP
