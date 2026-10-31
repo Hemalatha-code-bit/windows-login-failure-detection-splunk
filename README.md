@@ -1,2 +1,48 @@
-# windows-login-failure-detection-splunk
-A hands-on SIEM project to detect and investigate Windows login failures using Splunk SPL.
+# Windows Login Failure Detection and Investigation Using Splunk
+
+## Project Overview
+
+This project demonstrates how a Security Operations Center (SOC) analyst can use Splunk to detect and investigate failed Windows login attempts.
+
+The project focuses on analysing Windows Security Event Logs, identifying repeated authentication failures, investigating suspicious login patterns, and developing security monitoring queries using Splunk Search Processing Language (SPL).
+
+## Objectives
+
+- Understand Windows authentication events.
+- Identify failed login attempts using Windows Event ID 4625.
+- Detect repeated login failures within a defined time window.
+- Investigate usernames, source IP addresses, and event timestamps.
+- Develop SPL queries for security monitoring.
+- Create a dashboard and configure detection alerts.
+- Document investigation findings and recommended responses.
+
+## Tools and Technologies
+
+- Splunk Enterprise
+- Windows Security Event Logs
+- Splunk Search Processing Language (SPL)
+- GitHub
+
+## Project Status
+
+In progress.
+
+## Data and Testing
+
+Initial testing will use simulated or test Windows security events. Detection results will be validated against the available data.
+
+Simulated events will be clearly identified and will not be represented as real security incidents.
+
+## Expected Deliverables
+
+- Windows login failure event samples
+- SPL detection queries
+- Investigation notes
+- Security monitoring dashboard
+- Alert configuration
+- Sample incident report
+- Screenshots of project testing
+
+## Disclaimer
+
+This project is intended for educational and portfolio purposes. It does not represent professional SOC employment experience.
