@@ -1,1 +1,13 @@
+/*
+Project: Windows Login Failure Detection and Investigation
+Use Case: Potential Brute-Force Activity
+Data Source: Synthetic Windows authentication events
+*/
 
+index=main EventCode=4625
+| stats count AS failed_attempts
+        dc(Account_Name) AS unique_accounts
+        values(Account_Name) AS accounts
+        by Source_IP
+| where failed_attempts >= 3
+| sort - failed_attempts
