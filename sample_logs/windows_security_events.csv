@@ -1,1 +1,11 @@
-
+_time,EventCode,Account_Name,Source_IP,Logon_Type,Failure_Reason
+2026-10-30 09:00:00,4625,jsmith,192.168.1.25,3,Incorrect password
+2026-10-30 09:00:05,4625,jsmith,192.168.1.25,3,Incorrect password
+2026-10-30 09:00:10,4625,jsmith,192.168.1.25,3,Incorrect password
+2026-10-30 09:00:15,4625,jsmith,192.168.1.25,3,Incorrect password
+2026-10-30 09:01:00,4624,jsmith,192.168.1.25,3,Successful logon
+2026-10-30 09:05:00,4625,admin,192.168.1.50,10,Incorrect password
+2026-10-30 09:05:10,4625,administrator,192.168.1.50,10,Incorrect password
+2026-10-30 09:05:20,4625,testuser,192.168.1.50,10,Incorrect password
+2026-10-30 09:10:00,4625,jsmith,192.168.1.25,3,Incorrect password
+2026-10-30 09:15:00,4740,jsmith,,,
