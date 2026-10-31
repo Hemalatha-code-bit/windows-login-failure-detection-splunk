@@ -1,1 +1,13 @@
+/*
+Project: Windows Login Failure Detection and Investigation
+Use Case: Failed Logins Followed by Successful Authentication
+Data Source: Synthetic Windows authentication events
+*/
 
+index=main (EventCode=4625 OR EventCode=4624)
+| stats
+    count(eval(EventCode=4625)) AS failed_attempts
+    count(eval(EventCode=4624)) AS successful_attempts
+    values(EventCode) AS event_codes
+    by Account_Name, Source_IP
+| where failed_attempts > 0 AND successful_attempts > 0
