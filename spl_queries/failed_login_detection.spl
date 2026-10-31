@@ -1,1 +1,3 @@
-
+index=windows EventCode=4625
+| stats count AS failed_attempts by Account_Name, Source_IP
+| sort - failed_attempts
