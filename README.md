@@ -62,7 +62,7 @@ The following screenshots demonstrate the searches performed in Splunk using syn
 ## Detection Scenarios
 
 ### 1. Windows Failed Login Detection
-- **Event ID:** 4625
+- Event ID: 4625
 - Identified failed login attempts by account and source IP address.
 - Counted authentication failures to identify accounts requiring further investigation.
 
@@ -93,5 +93,24 @@ The following screenshots demonstrate the searches performed in Splunk using syn
 ## Dataset Disclaimer
 
 This project uses synthetic Windows authentication events created for educational purposes. The results demonstrate detection logic and investigation techniques; they do not represent a confirmed real-world security incident.
+
+### Windows Authentication Monitoring Dashboard
+
+Created a Splunk dashboard to visualize and investigate simulated Windows authentication events.
+
+Dashboard panels:
+- Windows Authentication Events by Event ID
+- Failed Login Attempts by User and Source IP
+- Potential Brute-Force Login Activity by Source IP
+- Failed and Successful Logins by User and Source IP
+
+Skills demonstrated:
+- SPL query development
+- Windows authentication event analysis
+- Failed login investigation
+- Suspicious authentication pattern detection
+- Security dashboard creation and visualization
+
+Note: This project uses simulated Windows security event data for educational and demonstration purposes.
 
 5. Multiple Accounts Targeted by One IP
