@@ -1,3 +1,13 @@
 index=windows EventCode=4625
 | stats count AS failed_attempts by Account_Name, Source_IP
 | sort - failed_attempts
+
+
+/*
+Project: Windows Login Failure Detection and Investigation
+Use Case: Failed Windows Login Detection
+Windows Event ID: 4625
+Purpose: Count failed login attempts by account and source IP.
+Data: Synthetic sample events for initial project development.
+*/
+
