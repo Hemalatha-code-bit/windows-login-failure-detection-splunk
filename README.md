@@ -25,7 +25,7 @@ The project focuses on analysing Windows Security Event Logs, identifying repeat
 
 ## Project Status
 
-In progress.
+Completed
 
 ## Data and Testing
 
@@ -46,3 +46,18 @@ Simulated events will be clearly identified and will not be represented as real 
 ## Disclaimer
 
 This project is intended for educational and portfolio purposes. It does not represent professional SOC employment experience.
+
+
+Project Screenshots
+
+The following screenshots demonstrate the searches performed in Splunk using synthetic Windows authentication events.
+
+1. Windows Event Ingestion
+
+2. Failed Login Detection
+
+3. Potential Brute-Force Activity
+
+4. Failed Logins and Successful Authentication
+
+5. Multiple Accounts Targeted by One IP
